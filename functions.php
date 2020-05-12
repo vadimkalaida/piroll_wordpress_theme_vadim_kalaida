@@ -21,6 +21,7 @@ if ( ! function_exists( 'piroll_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function piroll_setup() {
+    add_filter('show_admin_bar', '__return_false');
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -149,6 +150,8 @@ define('PI_IMG_DIR', PI_THEME_ROOT.'/img');
 
 function connectMainRoots() {
   wp_enqueue_style('basic', PI_CSS_DIR.'/basic.css');
+  wp_enqueue_style('header', PI_CSS_DIR.'/header.css');
+  wp_enqueue_style('top_banner', PI_CSS_DIR.'/top_banner.css');
 }
 
 add_action('wp_enqueue_scripts', 'connectMainRoots');

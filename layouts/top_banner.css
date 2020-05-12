@@ -1,0 +1,11 @@
+.topBanner {
+  width: 100%;
+  min-height: 60px;
+}
+
+.topBanner_container {
+  width: 90%;
+  min-height: 60px;
+  display: flex;
+  margin: auto;
+}
