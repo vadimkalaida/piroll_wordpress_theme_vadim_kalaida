@@ -209,6 +209,75 @@ function piroll_customize_register( $wp_customize ) {
     'section'    => 'top_banner_section',
     'settings'   => 'top_banner_btn_bg',
   ) ) );
+  
+  //ABOUT SECTION
+  $wp_customize->add_section( 'about_section' , array(
+    'title'      => __( 'ABOUT SECTION', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //About Background
+  $wp_customize->add_setting( 'about_bg' , array(
+    'default'   => '#ffffff',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'about_bg', array(
+    'label'      => __( 'Background Color', 'piroll' ),
+    'section'    => 'about_section',
+    'settings'   => 'about_bg',
+  ) ) );
+  //About Title
+  $wp_customize->add_setting( 'about_title' , array(
+    'default'   => 'About Us',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'about_title', array(
+    'label'      => __( 'Title', 'piroll' ),
+    'section'    => 'about_section',
+    'settings'   => 'about_title',
+  ) ) );
+  //About Title Color
+  $wp_customize->add_setting( 'about_title_color' , array(
+    'default'   => 'About Us',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'about_title_color', array(
+    'label'      => __( 'Title Color', 'piroll' ),
+    'section'    => 'about_section',
+    'settings'   => 'about_title_color',
+  ) ) );
+  //About Text
+  $wp_customize->add_setting( 'about_text' , array(
+    'default'   => 'Divide have don\'t man wherein air fourth. Own itself make have night won\'t make.
+    A you under Seed appear which good give. Own give air without fowl moveth dry first
+    heaven fruit, dominion she\'d won\'t very all.
+    ',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'about_text', array(
+    'label'      => __( 'Text', 'piroll' ),
+    'section'    => 'about_section',
+    'settings'   => 'about_text',
+  ) ) );
+  //About Text Color
+  $wp_customize->add_setting( 'about_text_color' , array(
+    'default'   => '#787878',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'about_text_color', array(
+    'label'      => __( 'Text Color', 'piroll' ),
+    'section'    => 'about_section',
+    'settings'   => 'about_text_color',
+  ) ) );
+  //About Text
+  $wp_customize->add_setting( 'about_sign_image' , array(
+    'default'   => '',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'about_sign_image', array(
+    'label'      => __( 'Signature', 'piroll' ),
+    'section'    => 'about_section',
+    'settings'   => 'about_sign_image',
+  ) ) );
 
 
 
