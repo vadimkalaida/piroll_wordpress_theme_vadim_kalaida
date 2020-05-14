@@ -1,11 +1,104 @@
 .topBanner {
   width: 100%;
-  min-height: 60px;
+  min-height: 670px;
 }
 
 .topBanner_container {
   width: 90%;
-  min-height: 60px;
+  min-height: 670px;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin: auto;
+}
+
+.topBanner_right {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.topBanner-title {
+  max-width: 480px;
+  font-size: 38px;
+  letter-spacing: .38px;
+  font-weight: 500;
+  color: #1d1d1d;
+  margin-bottom: 25px;
+}
+
+.topBanner-text {
+  max-width: 480px;
+  color: #787878;
+  font-family: 'Nunito', 'sans-serif';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: .09px;
+  transition: .2s;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.topBanner-btn {
+  padding: 20px 45px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-top: 0;
+}
+
+@media(min-width: 1750px) and (max-width: 2100px) {
+  .topBanner_right {
+    width: 30%;
+  }
+}
+
+@media(min-width: 1444px) and (max-width: 1749px) {
+  .topBanner_right {
+    width: 40%;
+  }
+}
+
+@media(min-width: 320px) and (max-width: 1749px) {
+  .topBanner-text {
+    color: #4D4D4D;
+  }
+}
+
+@media(min-width: 850px) and (max-width: 1443px) {
+  .topBanner-title {
+    font-size: 26px;
+  }
+  .topBanner_right {
+    width: 45%;
+  }
+}
+
+@media(min-width: 320px) and (max-width: 849px) {
+  .topBanner_container {
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .topBanner_right {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 125px;
+  }
+}
+
+@media(min-width: 320px) and (max-width: 640px) {
+  .topBanner-title {
+    font-size: 26px;
+  }
+  .topBanner-text {
+    font-size: 16px;
+  }
 }

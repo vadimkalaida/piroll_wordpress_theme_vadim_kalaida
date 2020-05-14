@@ -42,16 +42,6 @@ function piroll_customize_register( $wp_customize ) {
     'section'    => 'website_information_section',
     'settings'   => 'site_logo',
   ) ) );
-  //Website Color
-  $wp_customize->add_setting( 'site_color' , array(
-    'default'   => '#10c9c3',
-    'transport' => 'refresh',
-  ) );
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'site_color', array(
-    'label'      => __( 'Site Colors', 'piroll' ),
-    'section'    => 'website_information_section',
-    'settings'   => 'site_color',
-  ) ) );
 
 
   //HEADER SECTION
@@ -68,6 +58,16 @@ function piroll_customize_register( $wp_customize ) {
     'label'      => __( 'Navigation links color', 'piroll' ),
     'section'    => 'header_section',
     'settings'   => 'header_nav_links_color',
+  ) ) );
+  //Header Nav Links hover color
+  $wp_customize->add_setting( 'header_nav_links_hover_color' , array(
+    'default'   => '#10c9c3',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_nav_links_hover_color', array(
+    'label'      => __( 'Navigation links hover color', 'piroll' ),
+    'section'    => 'header_section',
+    'settings'   => 'header_nav_links_hover_color',
   ) ) );
   //Header Nav Link 1 text
   $wp_customize->add_setting( 'header_nav_link1_text' , array(
@@ -156,6 +156,58 @@ function piroll_customize_register( $wp_customize ) {
     'label'      => __( 'Background Image', 'piroll' ),
     'section'    => 'top_banner_section',
     'settings'   => 'top_banner_bg',
+  ) ) );
+  //Banner Title
+  $wp_customize->add_setting( 'top_banner_title' , array(
+    'default'   => 'We Design and Develop',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'top_banner_title', array(
+    'label'      => __( 'Title', 'piroll' ),
+    'section'    => 'top_banner_section',
+    'settings'   => 'top_banner_title',
+  ) ) );
+  //Banner Text
+  $wp_customize->add_setting( 'top_banner_text' , array(
+    'default'   => 'We are a new design studio based in USA. We have over
+    20 years of combined experience, and know a thing or two
+    about designing websites and mobile apps.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'top_banner_text', array(
+    'label'      => __( 'Text', 'piroll' ),
+    'section'    => 'top_banner_section',
+    'settings'   => 'top_banner_text',
+  ) ) );
+  //Banner Button Text
+  $wp_customize->add_setting( 'top_banner_btn_text' , array(
+    'default'   => 'Contact Us',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'top_banner_btn_text', array(
+    'label'      => __( 'Button Text', 'piroll' ),
+    'section'    => 'top_banner_section',
+    'settings'   => 'top_banner_btn_text',
+  ) ) );
+  //Banner Button Text Color
+  $wp_customize->add_setting( 'top_banner_btn_text_color' , array(
+    'default'   => '#ffffff',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'top_banner_btn_text_color', array(
+    'label'      => __( 'Button Text Color', 'piroll' ),
+    'section'    => 'top_banner_section',
+    'settings'   => 'top_banner_btn_text_color',
+  ) ) );
+  //Banner Button Background
+  $wp_customize->add_setting( 'top_banner_btn_bg' , array(
+    'default'   => '#10c9c3',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'top_banner_btn_bg', array(
+    'label'      => __( 'Button Background', 'piroll' ),
+    'section'    => 'top_banner_section',
+    'settings'   => 'top_banner_btn_bg',
   ) ) );
 
 
