@@ -306,15 +306,35 @@ function piroll_customize_register( $wp_customize ) {
     'section'    => 'skills_section',
     'settings'   => 'skills_title',
   ) ) );
-  //Skills Title Color
+  //Skills Main Title Color
   $wp_customize->add_setting( 'skills_title_color' , array(
     'default'   => '#171717',
     'transport' => 'refresh',
   ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'skills_title_color', array(
-    'label'      => __( 'Title Color', 'piroll' ),
+    'label'      => __( 'Main Title Color', 'piroll' ),
     'section'    => 'skills_section',
     'settings'   => 'skills_title_color',
+  ) ) );
+  //Skills Item Title Color
+  $wp_customize->add_setting( 'skills_item_title_color' , array(
+    'default'   => '#000000',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'skills_item_title_color', array(
+    'label'      => __( 'Skills Item Title Color', 'piroll' ),
+    'section'    => 'skills_section',
+    'settings'   => 'skills_item_title_color',
+  ) ) );
+  //Skills Bar Color
+  $wp_customize->add_setting( 'skills_bar_color' , array(
+    'default'   => '#10c9c3',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'skills_bar_color', array(
+    'label'      => __( 'Skills Bar Color', 'piroll' ),
+    'section'    => 'skills_section',
+    'settings'   => 'skills_bar_color',
   ) ) );
 
 

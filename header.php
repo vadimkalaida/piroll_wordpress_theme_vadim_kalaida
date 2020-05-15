@@ -36,7 +36,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-    <header class="header" id="header">
+    <header class="header">
         <div class="header_container">
             <div class="header_left">
                 <a href="<?php echo home_url(); ?>" class="header_logoLink"><img src="<?php echo get_theme_mod('site_logo'); ?>" alt="Site Logo"></a>
@@ -44,7 +44,7 @@
             <div class="header_right">
                 <div class="header_nav">
                     <?php if(get_theme_mod('header_nav_link1_text') !== '') { ?>
-                    <a href="#header" class="header_nav-link"><?php echo get_theme_mod('header_nav_link1_text'); ?></a>
+                    <a href="#topBanner" class="header_nav-link"><?php echo get_theme_mod('header_nav_link1_text'); ?></a>
                     <?php } ?>
                     <?php if(get_theme_mod('header_nav_link2_text') !== '') { ?>
                     <a href="#about" class="header_nav-link"><?php echo get_theme_mod('header_nav_link2_text'); ?></a>

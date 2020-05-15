@@ -173,3 +173,19 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+function create_post_type_pi_skills() {
+
+  register_post_type( 'pi_skills',
+    array(
+      'labels' => array(
+        'name' => __( 'Skills' ),
+        'singular_name' => __( 'Skills' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-star-filled',
+      'has_archive' => true,
+      'supports'           => array('')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_pi_skills' );
