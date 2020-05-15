@@ -21,14 +21,30 @@
     </div>
   </div>
   
-  <div class="about" style="background: <?php echo get_theme_mod('about_bg'); ?>">
+  <div class="about" id="about" style="background: <?php echo get_theme_mod('about_bg'); ?>">
     <div class="about_container">
       <h3 class="about-title" style="color: <?php echo get_theme_mod('about_title_color'); ?>"><?php echo get_theme_mod('about_title'); ?></h3>
       <p class="about-text" style="color: <?php echo get_theme_mod('about_text_color'); ?>"><?php echo get_theme_mod('about_text'); ?></p>
       <img class="about-img" src="<?php echo get_theme_mod('about_sign_image'); ?>" alt="Signature">
     </div>
   </div>
-  
+    
+  <div class="skills" id="skills">
+      <div class="skills_container">
+          <div class="skills_left">
+              <div class="skills_left_container">
+                  <h3 class="skills-title" style="color: <?php echo get_theme_mod('skills_title_color'); ?>;"><?php echo get_theme_mod('skills_title'); ?></h3>
+              </div>
+          </div>
+          <div class="skills_right" style="
+              background: url('<?php echo get_theme_mod('skills_img'); ?>');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              ">
+          </div>
+      </div>  
+  </div>
 </main>
 
 <?php

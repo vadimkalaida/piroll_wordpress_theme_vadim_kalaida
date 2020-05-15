@@ -1,0 +1,38 @@
+.skills {
+  width: 100%;
+  min-height: 550px;
+}
+
+.skills_container {
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+}
+
+.skills_left {
+  width: 50%;
+  min-height: 550px;
+}
+
+.skills_left_container {
+  width: 90%;
+  min-height: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.skills-title {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: .3px;
+}
+
+.skills_right {
+  width: 50%;
+  min-height: 550px;
+}

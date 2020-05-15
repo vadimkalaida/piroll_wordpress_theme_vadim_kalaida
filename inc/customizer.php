@@ -281,6 +281,43 @@ function piroll_customize_register( $wp_customize ) {
 
 
 
+  //SKILLS SECTION
+  $wp_customize->add_section( 'skills_section' , array(
+    'title'      => __( 'SKILLS Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //Skills Right Image
+  $wp_customize->add_setting( 'skills_img' , array(
+    'default'   => '',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'skills_img', array(
+    'label'      => __( 'Image', 'piroll' ),
+    'section'    => 'skills_section',
+    'settings'   => 'skills_img',
+  ) ) );
+  //Skills Title
+  $wp_customize->add_setting( 'skills_title' , array(
+    'default'   => 'Professional Skills',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'skills_title', array(
+    'label'      => __( 'Title', 'piroll' ),
+    'section'    => 'skills_section',
+    'settings'   => 'skills_title',
+  ) ) );
+  //Skills Title Color
+  $wp_customize->add_setting( 'skills_title_color' , array(
+    'default'   => '#171717',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'skills_title_color', array(
+    'label'      => __( 'Title Color', 'piroll' ),
+    'section'    => 'skills_section',
+    'settings'   => 'skills_title_color',
+  ) ) );
+
+
 }
 add_action( 'customize_register', 'piroll_customize_register' );
 

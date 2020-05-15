@@ -153,6 +153,7 @@ function connectMainRoots() {
   wp_enqueue_style('header', PI_CSS_DIR.'/header.css');
   wp_enqueue_style('top_banner', PI_CSS_DIR.'/top_banner.css');
   wp_enqueue_style('about_us', PI_CSS_DIR.'/about_us.css');
+  wp_enqueue_style('skills', PI_CSS_DIR.'/skills.css');
 }
 
 add_action('wp_enqueue_scripts', 'connectMainRoots');
