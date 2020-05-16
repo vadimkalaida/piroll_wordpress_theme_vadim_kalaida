@@ -38,7 +38,7 @@
                     <?php
                     $args = array(
                       'post_type'      => 'pi_skills',
-                      'posts_per_page' => '20',
+                      'posts_per_page' => '30',
                     );
 
                     $query = new WP_Query($args);
@@ -78,6 +78,41 @@
           </div>
       </div>  
   </div>
+
+    <div class="numbers" style="background: <?php echo get_theme_mod('numbers_bg'); ?>">
+        <div class="numbers_container">
+          <?php
+          $args = array(
+            'post_type'      => 'pi_numbers',
+            'posts_per_page' => '40',
+          );
+
+          $query = new WP_Query($args);
+          if($query->have_posts()) {
+          while($query->have_posts()) {
+          $query->the_post();
+          ?>
+            <div class="numbers_post">
+              <?php if(has_post_thumbnail()) {
+                echo get_the_post_thumbnail(get_the_ID());
+              }else {
+                echo '<img src="'.PI_IMG_DIR.'/dae6d405-af3c-4e0d-b961-d49795a88ec1_1.f0276d14656e2f9f78bc6f315f649c18.jpeg">';
+              }; ?>
+                <div class="numbers_post_text">
+                    <div class="numbers_post-number" style="color: <?php echo get_theme_mod('numbers_color'); ?>;"><?php echo get_post_meta(get_the_ID(), 'number', true); ?></div>
+                    <div class="numbers_post-title" style="color: <?php echo get_theme_mod('numbers_titles_color'); ?>;"><?php echo get_post_meta(get_the_ID(), 'numbers_item_tittle', true); ?></div>
+                </div>
+            </div>
+            <?php
+          }
+
+          } else {}
+
+          wp_reset_postdata();
+
+          ?>
+        </div>
+    </div>
 </main>
 
 <?php

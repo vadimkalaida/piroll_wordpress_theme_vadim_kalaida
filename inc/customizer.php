@@ -338,6 +338,43 @@ function piroll_customize_register( $wp_customize ) {
   ) ) );
 
 
+
+  //NUMBERS SECTION
+  $wp_customize->add_section( 'numbers_section' , array(
+    'title'      => __( 'NUMBERS Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //NUMBERS Background
+  $wp_customize->add_setting( 'numbers_bg' , array(
+    'default'   => '#10c9c3',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'numbers_bg', array(
+    'label'      => __( 'Background Color', 'piroll' ),
+    'section'    => 'numbers_section',
+    'settings'   => 'numbers_bg',
+  ) ) );
+  //NUMBERS Color
+  $wp_customize->add_setting( 'numbers_color' , array(
+    'default'   => '#ffffff',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'numbers_color', array(
+    'label'      => __( 'Numbers color', 'piroll' ),
+    'section'    => 'numbers_section',
+    'settings'   => 'numbers_color',
+  ) ) );
+  //NUMBERS Title Color
+  $wp_customize->add_setting( 'numbers_titles_color' , array(
+    'default'   => '#ffffff',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'numbers_titles_color', array(
+    'label'      => __( 'Numbers titles color', 'piroll' ),
+    'section'    => 'numbers_section',
+    'settings'   => 'numbers_titles_color',
+  ) ) );
+
 }
 add_action( 'customize_register', 'piroll_customize_register' );
 
