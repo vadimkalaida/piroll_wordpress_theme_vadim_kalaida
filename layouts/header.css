@@ -3,6 +3,7 @@
   min-height: 75px;
   background: rgba(255, 255, 255, .5);
   position: fixed;
+  z-index: 99999999;
 }
 
 .header_container {

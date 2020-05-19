@@ -375,6 +375,54 @@ function piroll_customize_register( $wp_customize ) {
     'settings'   => 'numbers_titles_color',
   ) ) );
 
+
+
+  //WORKS SECTION
+  $wp_customize->add_section( 'works_section' , array(
+    'title'      => __( 'WORKS Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //WORKS Image Hover Button Image
+  $wp_customize->add_setting( 'works_image_hover_button' , array(
+    'default'   => '',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'works_image_hover_button', array(
+    'label'      => __( 'Image Hover Button', 'piroll' ),
+    'section'    => 'works_section',
+    'settings'   => 'works_image_hover_button',
+  ) ) );
+  //WORKS Button Background
+  $wp_customize->add_setting( 'works_button_bg' , array(
+    'default'   => '#f5f5f5',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'works_button_bg', array(
+    'label'      => __( 'Button Background Color', 'piroll' ),
+    'section'    => 'works_section',
+    'settings'   => 'works_button_bg',
+  ) ) );
+  //WORKS Button Text
+  $wp_customize->add_setting( 'works_button_text' , array(
+    'default'   => 'load more work',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'works_button_text', array(
+    'label'      => __( 'Button Text', 'piroll' ),
+    'section'    => 'works_section',
+    'settings'   => 'works_button_text',
+  ) ) );
+  //WORKS Button Text Color
+  $wp_customize->add_setting( 'works_button_text_color' , array(
+    'default'   => '#8e8e8e',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'works_button_text_color', array(
+    'label'      => __( 'Button Text Color', 'piroll' ),
+    'section'    => 'works_section',
+    'settings'   => 'works_button_text_color',
+  ) ) );
+
 }
 add_action( 'customize_register', 'piroll_customize_register' );
 

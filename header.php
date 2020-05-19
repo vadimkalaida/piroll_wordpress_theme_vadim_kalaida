@@ -44,13 +44,13 @@
             <div class="header_right">
                 <div class="header_nav">
                     <?php if(get_theme_mod('header_nav_link1_text') !== '') { ?>
-                    <a href="#topBanner" class="header_nav-link"><?php echo get_theme_mod('header_nav_link1_text'); ?></a>
+                    <a href="<?php echo home_url(); ?>" class="header_nav-link"><?php echo get_theme_mod('header_nav_link1_text'); ?></a>
                     <?php } ?>
                     <?php if(get_theme_mod('header_nav_link2_text') !== '') { ?>
                     <a href="#about" class="header_nav-link"><?php echo get_theme_mod('header_nav_link2_text'); ?></a>
                     <?php } ?>
                     <?php if(get_theme_mod('header_nav_link3_text') !== '') { ?>
-                    <a href="#" class="header_nav-link"><?php echo get_theme_mod('header_nav_link3_text'); ?></a>
+                    <a href="#works" class="header_nav-link"><?php echo get_theme_mod('header_nav_link3_text'); ?></a>
                     <?php } ?>
                     <?php if(get_theme_mod('header_nav_link4_text') !== '') { ?>
                     <a href="#" class="header_nav-link"><?php echo get_theme_mod('header_nav_link4_text'); ?></a>

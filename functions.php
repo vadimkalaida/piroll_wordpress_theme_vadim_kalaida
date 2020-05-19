@@ -155,6 +155,7 @@ function connectMainRoots() {
   wp_enqueue_style('about_us', PI_CSS_DIR.'/about_us.css');
   wp_enqueue_style('skills', PI_CSS_DIR.'/skills.css');
   wp_enqueue_style('numbers', PI_CSS_DIR.'/numbers.css');
+  wp_enqueue_style('works', PI_CSS_DIR.'/works.css');
 }
 
 add_action('wp_enqueue_scripts', 'connectMainRoots');
@@ -207,3 +208,20 @@ function create_post_type_pi_numbers() {
   );
 }
 add_action( 'init', 'create_post_type_pi_numbers' );
+
+function create_post_type_pi_works() {
+
+  register_post_type( 'pi_works',
+    array(
+      'labels' => array(
+        'name' => __( 'Works' ),
+        'singular_name' => __( 'Works' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-admin-page',
+      'has_archive' => true,
+      'supports'           => array('thumbnail', 'title')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_pi_works' );
