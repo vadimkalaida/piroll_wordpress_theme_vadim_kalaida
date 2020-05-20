@@ -423,6 +423,64 @@ function piroll_customize_register( $wp_customize ) {
     'settings'   => 'works_button_text_color',
   ) ) );
 
+
+
+  //WORK PROCESS SECTION
+  $wp_customize->add_section( 'worksProcess_section' , array(
+    'title'      => __( 'WORK PROCESS Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //WORK PROCESS Title
+  $wp_customize->add_setting( 'worksProcess_title' , array(
+    'default'   => 'Our Work Process',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'worksProcess_title', array(
+    'label'      => __( 'Title', 'piroll' ),
+    'section'    => 'worksProcess_section',
+    'settings'   => 'worksProcess_title',
+  ) ) );
+  //WORK PROCESS Title Color
+  $wp_customize->add_setting( 'worksProcess_title_color' , array(
+    'default'   => '#191919',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'worksProcess_title_color', array(
+    'label'      => __( 'Title', 'piroll' ),
+    'section'    => 'worksProcess_section',
+    'settings'   => 'worksProcess_title_color',
+  ) ) );
+  //WORK PROCESS Description
+  $wp_customize->add_setting( 'worksProcess_description' , array(
+    'default'   => 'Was years it seasons was there form he in in them together over that, third sixth gathered female creeping bearing behold years.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'worksProcess_description', array(
+    'label'      => __( 'Description', 'piroll' ),
+    'section'    => 'worksProcess_section',
+    'settings'   => 'worksProcess_description',
+  ) ) );
+  //WORK PROCESS Description Color
+  $wp_customize->add_setting( 'worksProcess_description_color' , array(
+    'default'   => '#787878',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'worksProcess_description_color', array(
+    'label'      => __( 'Description Title', 'piroll' ),
+    'section'    => 'worksProcess_section',
+    'settings'   => 'worksProcess_description_color',
+  ) ) );
+    //WORK PROCESS Video Link
+  $wp_customize->add_setting( 'worksProcess_video_link' , array(
+    'default'   => 'https://www.youtube.com/embed/sGS0ufEINYw',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'worksProcess_video_link', array(
+    'label'      => __( 'Embed Video Link(only src="...")', 'piroll' ),
+    'section'    => 'worksProcess_section',
+    'settings'   => 'worksProcess_video_link',
+  ) ) );
+
 }
 add_action( 'customize_register', 'piroll_customize_register' );
 

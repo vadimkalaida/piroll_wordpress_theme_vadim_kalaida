@@ -20,8 +20,8 @@
 }
 
 .works_post {
-  width: 25%;
-  height: 40vh;
+  width: 380px;
+  height: 300px;
   position: relative;
 }
 
@@ -73,4 +73,10 @@
   font-size: 48px;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+@media(min-width: 320px) and (max-width: 380px) {
+  .works_post {
+    width: 320px;
+  }
 }

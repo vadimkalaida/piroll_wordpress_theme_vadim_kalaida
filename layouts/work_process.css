@@ -1,0 +1,55 @@
+.workProcess {
+  width: 100%;
+  min-height: 150px;
+}
+
+.workProcess_container {
+  width: 90%;
+  min-height: 150px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.workProcess-title {
+  max-width: 70%;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.workProcess-text {
+  max-width: 600px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .08px;
+  font-family: "Nunito", 'sans-serif';
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.workProcess-video {
+  width: 80%;
+  height: 60vh;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+@media(min-width: 320px) and (max-width: 700px) {
+  .workProcess-video {
+    height: 40vh;
+  }
+}
+
+@media(min-width: 320px) and (max-width: 560px) {
+  .workProcess-title {
+    font-size: 24px;
+  }
+  .workProcess-text {
+    font-size: 14px;
+  }
+}

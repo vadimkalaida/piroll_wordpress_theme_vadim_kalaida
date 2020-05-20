@@ -163,6 +163,14 @@
         </div>
     </div>
 
+    <div class="workProcess">
+        <div class="workProcess_container">
+            <h3 class="workProcess-title" style="color: <?php echo get_theme_mod('worksProcess_title_color'); ?>;"><?php echo get_theme_mod('worksProcess_title'); ?></h3>
+            <p class="workProcess-text" style="color: <?php echo get_theme_mod('worksProcess_description_color'); ?>;"><?php echo get_theme_mod('worksProcess_description'); ?></p>
+            <iframe class="workProcess-video" src="<?php echo get_theme_mod('worksProcess_video_link'); ?>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
 </main>
 
 <?php

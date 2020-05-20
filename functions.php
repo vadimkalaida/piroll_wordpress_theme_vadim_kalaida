@@ -156,6 +156,8 @@ function connectMainRoots() {
   wp_enqueue_style('skills', PI_CSS_DIR.'/skills.css');
   wp_enqueue_style('numbers', PI_CSS_DIR.'/numbers.css');
   wp_enqueue_style('works', PI_CSS_DIR.'/works.css');
+  wp_enqueue_style('work_process', PI_CSS_DIR.'/work_process.css');
+
 }
 
 add_action('wp_enqueue_scripts', 'connectMainRoots');
