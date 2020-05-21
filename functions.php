@@ -157,6 +157,7 @@ function connectMainRoots() {
   wp_enqueue_style('numbers', PI_CSS_DIR.'/numbers.css');
   wp_enqueue_style('works', PI_CSS_DIR.'/works.css');
   wp_enqueue_style('work_process', PI_CSS_DIR.'/work_process.css');
+  wp_enqueue_style('services', PI_CSS_DIR.'/services.css');
 
 }
 
@@ -227,3 +228,20 @@ function create_post_type_pi_works() {
   );
 }
 add_action( 'init', 'create_post_type_pi_works' );
+
+function create_post_type_pi_services() {
+
+  register_post_type( 'pi_services',
+    array(
+      'labels' => array(
+        'name' => __( 'Services' ),
+        'singular_name' => __( 'Services' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-awards',
+      'has_archive' => true,
+      'supports'           => array('thumbnail')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_pi_services' );

@@ -171,6 +171,38 @@
         </div>
     </div>
 
+    <div class="services" style="background: <?php echo get_theme_mod('services_bg'); ?>;">
+      <div class="services_container">
+        <?php
+        $args = array(
+          'post_type'      => 'pi_services',
+          'posts_per_page' => '100',
+        );
+
+        $query = new WP_Query($args);
+        if($query->have_posts()) {
+        while($query->have_posts()) {
+        $query->the_post();
+        ?>
+          <div class="services_post">
+            <?php if(has_post_thumbnail()) {
+              echo get_the_post_thumbnail(get_the_ID());
+            }else {
+              echo '<img src="'.PI_IMG_DIR.'/dae6d405-af3c-4e0d-b961-d49795a88ec1_1.f0276d14656e2f9f78bc6f315f649c18.jpeg">';
+            }; ?>
+              <p class="services_post-title" style="color: <?php echo get_theme_mod('services_item_title_color'); ?>;"><?php echo get_post_meta(get_the_ID(), 'item_title', true); ?></p>
+              <p class="services_post-text" style="color: <?php echo get_theme_mod('services_item_text_color'); ?>;"><?php echo get_post_meta(get_the_ID(), 'item_text', true); ?></p>
+          </div>
+          <?php
+        }
+
+        } else {}
+
+        wp_reset_postdata();
+
+        ?>
+      </div>
+    </div>
 </main>
 
 <?php

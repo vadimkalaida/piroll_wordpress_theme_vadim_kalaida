@@ -481,6 +481,44 @@ function piroll_customize_register( $wp_customize ) {
     'settings'   => 'worksProcess_video_link',
   ) ) );
 
+
+
+  //SERVICES SECTION
+  $wp_customize->add_section( 'services_section' , array(
+    'title'      => __( 'SERVICES Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //WORK PROCESS Background
+  $wp_customize->add_setting( 'services_bg' , array(
+    'default'   => '#f5f5f5',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'services_bg', array(
+    'label'      => __( 'Background', 'piroll' ),
+    'section'    => 'services_section',
+    'settings'   => 'services_bg',
+  ) ) );
+  //WORK PROCESS Item Title Color
+  $wp_customize->add_setting( 'services_item_title_color' , array(
+    'default'   => '#191919',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'services_item_title_color', array(
+    'label'      => __( 'Item Title Color', 'piroll' ),
+    'section'    => 'services_section',
+    'settings'   => 'services_item_title_color',
+  ) ) );
+  //WORK PROCESS Item Text Color
+  $wp_customize->add_setting( 'services_item_text_color' , array(
+    'default'   => '#787878',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'services_item_text_color', array(
+    'label'      => __( 'Item Text Color', 'piroll' ),
+    'section'    => 'services_section',
+    'settings'   => 'services_item_text_color',
+  ) ) );
+
 }
 add_action( 'customize_register', 'piroll_customize_register' );
 
