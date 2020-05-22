@@ -53,13 +53,13 @@
                     <a href="#works" class="header_nav-link"><?php echo get_theme_mod('header_nav_link3_text'); ?></a>
                     <?php } ?>
                     <?php if(get_theme_mod('header_nav_link4_text') !== '') { ?>
-                    <a href="#" class="header_nav-link"><?php echo get_theme_mod('header_nav_link4_text'); ?></a>
+                    <a href="#process" class="header_nav-link"><?php echo get_theme_mod('header_nav_link4_text'); ?></a>
                     <?php } ?>
                     <?php if(get_theme_mod('header_nav_link5_text') !== '') { ?>
-                    <a href="#" class="header_nav-link"><?php echo get_theme_mod('header_nav_link5_text'); ?></a>
+                    <a href="#services" class="header_nav-link"><?php echo get_theme_mod('header_nav_link5_text'); ?></a>
                     <?php } ?>
                     <?php if(get_theme_mod('header_nav_link6_text') !== '') { ?>
-                    <a href="#" class="header_nav-link"><?php echo get_theme_mod('header_nav_link6_text'); ?></a>
+                    <a href="#testimonials" class="header_nav-link"><?php echo get_theme_mod('header_nav_link6_text'); ?></a>
                     <?php } ?>
                     <?php if(get_theme_mod('header_nav_link7_text') !== '') { ?>
                     <a href="#" class="header_nav-link"><?php echo get_theme_mod('header_nav_link7_text'); ?></a>

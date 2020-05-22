@@ -488,7 +488,7 @@ function piroll_customize_register( $wp_customize ) {
     'title'      => __( 'SERVICES Section', 'piroll' ),
     'priority'   => 30,
   ) );
-  //WORK PROCESS Background
+  //SERVICES Background
   $wp_customize->add_setting( 'services_bg' , array(
     'default'   => '#f5f5f5',
     'transport' => 'refresh',
@@ -498,7 +498,7 @@ function piroll_customize_register( $wp_customize ) {
     'section'    => 'services_section',
     'settings'   => 'services_bg',
   ) ) );
-  //WORK PROCESS Item Title Color
+  //SERVICES Item Title Color
   $wp_customize->add_setting( 'services_item_title_color' , array(
     'default'   => '#191919',
     'transport' => 'refresh',
@@ -508,7 +508,7 @@ function piroll_customize_register( $wp_customize ) {
     'section'    => 'services_section',
     'settings'   => 'services_item_title_color',
   ) ) );
-  //WORK PROCESS Item Text Color
+  //SERVICES Item Text Color
   $wp_customize->add_setting( 'services_item_text_color' , array(
     'default'   => '#787878',
     'transport' => 'refresh',
@@ -517,6 +517,102 @@ function piroll_customize_register( $wp_customize ) {
     'label'      => __( 'Item Text Color', 'piroll' ),
     'section'    => 'services_section',
     'settings'   => 'services_item_text_color',
+  ) ) );
+
+
+
+  //TESTIMONIALS SECTION
+  $wp_customize->add_section( 'testimonials_section' , array(
+    'title'      => __( 'TESTIMONIALS Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //TESTIMONIALS Background
+  $wp_customize->add_setting( 'testimonials_bg' , array(
+    'default'   => '#10c9c3',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'testimonials_bg', array(
+    'label'      => __( 'Background', 'piroll' ),
+    'section'    => 'testimonials_section',
+    'settings'   => 'testimonials_bg',
+  ) ) );
+
+
+
+
+  //CLIENTS SECTION
+  $wp_customize->add_section( 'clients_section' , array(
+    'title'      => __( 'CLIENTS Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //CLIENTS Background
+  $wp_customize->add_setting( 'clients_bg' , array(
+    'default'   => '#ffffff',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'clients_bg', array(
+    'label'      => __( 'Background', 'piroll' ),
+    'section'    => 'clients_section',
+    'settings'   => 'clients_bg',
+  ) ) );
+
+
+
+
+  //CONTACT SECTION
+  $wp_customize->add_section( 'contact_section' , array(
+    'title'      => __( 'CONTACT Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //CONTACT Background
+  $wp_customize->add_setting( 'contact_bg' , array(
+    'default'   => '#f5f5f5',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'contact_bg', array(
+    'label'      => __( 'Background', 'piroll' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_bg',
+  ) ) );
+  //CONTACT Title
+  $wp_customize->add_setting( 'contact_title' , array(
+    'default'   => 'Need a Project?',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_title', array(
+    'label'      => __( 'Title', 'piroll' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_title',
+  ) ) );
+  //CONTACT Title Color
+  $wp_customize->add_setting( 'contact_title_color' , array(
+    'default'   => '#1d1d1d',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'contact_title_color', array(
+    'label'      => __( 'Title Color', 'piroll' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_title_color',
+  ) ) );
+  //CONTACT Text
+  $wp_customize->add_setting( 'contact_text' , array(
+    'default'   => 'Let us know what you\'re looking for in an agency. We\'ll take a look and see if this could be the start of something beautiful.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_text', array(
+    'label'      => __( 'Text', 'piroll' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_text',
+  ) ) );
+  //CONTACT Text Color
+  $wp_customize->add_setting( 'contact_text_color' , array(
+    'default'   => '#787878',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'contact_text_color', array(
+    'label'      => __( 'Text Color', 'piroll' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_text_color',
   ) ) );
 
 }

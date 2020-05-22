@@ -158,7 +158,9 @@ function connectMainRoots() {
   wp_enqueue_style('works', PI_CSS_DIR.'/works.css');
   wp_enqueue_style('work_process', PI_CSS_DIR.'/work_process.css');
   wp_enqueue_style('services', PI_CSS_DIR.'/services.css');
-
+  wp_enqueue_style('testimonials', PI_CSS_DIR.'/testimonials.css');
+  wp_enqueue_style('clients', PI_CSS_DIR.'/clients.css');
+  wp_enqueue_style('contact', PI_CSS_DIR.'/contact.css');
 }
 
 add_action('wp_enqueue_scripts', 'connectMainRoots');
@@ -245,3 +247,20 @@ function create_post_type_pi_services() {
   );
 }
 add_action( 'init', 'create_post_type_pi_services' );
+
+function create_post_type_pi_clients() {
+
+  register_post_type( 'pi_clients',
+    array(
+      'labels' => array(
+        'name' => __( 'Clients' ),
+        'singular_name' => __( 'Clients' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-universal-access-alt',
+      'has_archive' => true,
+      'supports'           => array('title', 'thumbnail')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_pi_clients' );

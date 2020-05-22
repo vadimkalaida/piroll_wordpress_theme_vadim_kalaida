@@ -163,7 +163,7 @@
         </div>
     </div>
 
-    <div class="workProcess">
+    <div class="workProcess" id="process">
         <div class="workProcess_container">
             <h3 class="workProcess-title" style="color: <?php echo get_theme_mod('worksProcess_title_color'); ?>;"><?php echo get_theme_mod('worksProcess_title'); ?></h3>
             <p class="workProcess-text" style="color: <?php echo get_theme_mod('worksProcess_description_color'); ?>;"><?php echo get_theme_mod('worksProcess_description'); ?></p>
@@ -171,7 +171,7 @@
         </div>
     </div>
 
-    <div class="services" style="background: <?php echo get_theme_mod('services_bg'); ?>;">
+    <div class="services" id="services" style="background: <?php echo get_theme_mod('services_bg'); ?>;">
       <div class="services_container">
         <?php
         $args = array(
@@ -202,6 +202,52 @@
 
         ?>
       </div>
+    </div>
+
+    <div class="testimonials" id="testimonials" style="background: <?php echo get_theme_mod('testimonials_bg'); ?>;">
+        <div class="testimonials_container">
+
+        </div>
+    </div>
+
+    <div class="clients" style="background: <?php echo get_theme_mod('clients_bg'); ?>;">
+        <div class="clients_container">
+            <div class="clients_posts">
+              <?php
+              $args = array(
+                'post_type'      => 'pi_clients',
+                'posts_per_page' => '100',
+              );
+
+              $query = new WP_Query($args);
+              if($query->have_posts()) {
+              while($query->have_posts()) {
+              $query->the_post();
+              ?>
+                <div class="clients_post">
+                  <?php if(has_post_thumbnail()) {
+                    echo get_the_post_thumbnail(get_the_ID());
+                  }else {
+                    echo '<img src="'.PI_IMG_DIR.'/dae6d405-af3c-4e0d-b961-d49795a88ec1_1.f0276d14656e2f9f78bc6f315f649c18.jpeg">';
+                  }; ?>
+                </div>
+                <?php
+              }
+
+              } else {}
+
+              wp_reset_postdata();
+
+              ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact" style="background: <?php echo get_theme_mod('contact_bg'); ?>;">
+        <div class="contact_container">
+            <h3 class="contact-title" style="color: <?php echo get_theme_mod('contact_title_color'); ?>;"><?php echo get_theme_mod('contact_title'); ?></h3>
+            <p class="contact-text" style="color: <?php echo get_theme_mod('contact_text_color'); ?>;"><?php echo get_theme_mod('contact_text'); ?></p>
+        </div>
     </div>
 </main>
 
