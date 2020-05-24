@@ -615,6 +615,24 @@ function piroll_customize_register( $wp_customize ) {
     'settings'   => 'contact_text_color',
   ) ) );
 
+
+
+  //FOOTER SECTION
+  $wp_customize->add_section( 'footer_section' , array(
+    'title'      => __( 'FOOTER Section', 'piroll' ),
+    'priority'   => 30,
+  ) );
+  //FOOTER Background
+  $wp_customize->add_setting( 'footer_bg' , array(
+    'default'   => '#141414',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_bg', array(
+    'label'      => __( 'Background', 'piroll' ),
+    'section'    => 'footer_section',
+    'settings'   => 'footer_bg',
+  ) ) );
+
 }
 add_action( 'customize_register', 'piroll_customize_register' );
 

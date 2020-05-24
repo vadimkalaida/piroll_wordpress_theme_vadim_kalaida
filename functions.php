@@ -161,6 +161,7 @@ function connectMainRoots() {
   wp_enqueue_style('testimonials', PI_CSS_DIR.'/testimonials.css');
   wp_enqueue_style('clients', PI_CSS_DIR.'/clients.css');
   wp_enqueue_style('contact', PI_CSS_DIR.'/contact.css');
+  wp_enqueue_style('footer', PI_CSS_DIR.'/footer.css');
 }
 
 add_action('wp_enqueue_scripts', 'connectMainRoots');

@@ -11,8 +11,10 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<p>Just Footer</p>
+	<footer id="footer" class="footer" style="background: <?php echo get_theme_mod('footer_bg'); ?>;">
+		<div class="footer_container">
+
+        </div>
 	</footer>
 </div>
 
