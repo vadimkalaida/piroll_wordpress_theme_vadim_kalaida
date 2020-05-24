@@ -247,6 +247,18 @@
         <div class="contact_container">
             <h3 class="contact-title" style="color: <?php echo get_theme_mod('contact_title_color'); ?>;"><?php echo get_theme_mod('contact_title'); ?></h3>
             <p class="contact-text" style="color: <?php echo get_theme_mod('contact_text_color'); ?>;"><?php echo get_theme_mod('contact_text'); ?></p>
+            <div class="contact_form">
+<!--              <form>-->
+<!--                <div class="contact_form_top">-->
+<!--                  <input type="text" name="name" class="contact_form_top-input" id="name" placeholder="Your Name" required>-->
+<!--                  <input type="email" name="email" class="contact_form_top-input" id="email" placeholder="Your Email" required>-->
+<!--                </div>-->
+<!--                <input type="text" name="title" class="contact_form-input" id="title" placeholder="Your Title" required>-->
+<!--                <textarea name="comment" class="contact_form-textarea" placeholder="Your Comment" id="comment"></textarea>-->
+<!--                <input type="submit" name="submit" class="contact_form-btn" id="submit" value="Send message">-->
+<!--              </form>-->
+              <?php echo do_shortcode('[contact-form-7 id="11" title="Contact form 1"]')?>
+            </div>
         </div>
     </div>
 </main>
